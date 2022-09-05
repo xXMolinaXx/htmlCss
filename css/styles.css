@@ -80,20 +80,27 @@ nombre-de-la-clase*/
 
 .container{
     border: 0.3rem solid black;
+    height: 50vh;
+    flex-direction: row;
     display: flex;/*se aplica para poder usar justify y align*/
-    flex-direction: row-reverse;
     justify-content:center ; /*alinear contenido de forma horizontal */
-    align-content: center;/*alinear en vertical*/
+    align-items: center;/*alinear en vertical*/
 }
 .box {
     width: 10rem;
     height: 10rem;
+    flex-basis: 1rem;
+    flex-grow: 1;
 }
 .box-1{
     background-color:black ;
+    order: 2;
+    flex-grow: 1;/*flex-grow es como el felx de react native */
 }
 .box-2{
    background-color:yellow ; 
+   order: 1;/*cambiar el orden de los contenedor segun su hermanos*/
+   flex-grow: 1;
 }
 .box-3{
    background-color: blue; 
